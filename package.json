@@ -1,0 +1,34 @@
+{
+  "name": "helper",
+  "version": "1.0.0",
+  "description": "a javascript tools package",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "jsdoc --configure jsdoc.config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Magic-zhu/helper.git"
+  },
+  "keywords": [
+    "tool",
+    "javascipt",
+    "lodash",
+    "utils"
+  ],
+  "author": "magic-zhu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Magic-zhu/helper/issues"
+  },
+  "homepage": "https://github.com/Magic-zhu/helper#readme",
+  "devDependencies": {
+    "docdash": "^1.2.0",
+    "jest": "^25.1.0",
+    "minami": "^1.2.3"
+  }
+}

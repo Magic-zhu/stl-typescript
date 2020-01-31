@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>chunk.js - Documentation</title>
+    <title>getQuery.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">chunk.js</h1>
+    <h1 class="page-title">getQuery.js</h1>
     
 
     
@@ -42,28 +42,26 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/** 
- *  将数组（array）拆分成多个 size 长度的区块，并将这些区块组成一个新数组。 如果array 无法被分割成全部等长的区块，那么最后剩余的元素将组成一个区块。
- *  @param {Array}   array - 需要处理的数组
- *  @param {number} size - 每个数组区块的长度
- *  @return {Array} - 返回一个包含拆分区块的新数组（相当于一个二维数组）。
- *  @version 1.0.0
-*/
-const chunk = function (array, size = 1) {
-    let newArr = [];
-    let length = array.length;
-    let arrSize = ~~(length / size);
-    for (let i = 0; i &lt; arrSize; i++) {
-        let temp = [];
-        for (let j = 0; j &lt; size; j++) {
-            temp.push(array[i * size + j]);
-        }
-        newArr.push(temp)
-    }
-    if (length % size !== 0) newArr.push(array.slice(arrSize * size, length));
-    return newArr
+            <pre class="prettyprint source linenums"><code>
+/**
+ * @description &lt;span style='color:red;font-weight:bold'>解析url对象&lt;/span>
+ * @param {*} url - 要解析的url (xxxxxxx?xxxx=xxx&amp;xxxx=xxxxx的隔式)
+ * @return {Object} - 返回参数对象
+ * @version 1.0.0 
+ */
+
+const getQuery = function (url){
+    let uri = url.split('?')[1];
+    uri = uri.split('&amp;');
+    let obj = {};
+    uri.forEach(item=>{
+        let t = item.split("=");
+        obj[t[0]] = t[1]||null;
+    })
+    return obj
 }
-export default chunk</code></pre>
+
+export default getQuery</code></pre>
         </article>
     </section>
 

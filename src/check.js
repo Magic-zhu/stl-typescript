@@ -2,7 +2,7 @@
  * @param {*} value - 输入值
  * @param {String} type - 判断的种类
  * @description
- * _检查输入值是否符合某个条件_
+ *  <span style='color:red;font-weight:bold'>检查输入值是否符合某个条件</span>
  * |type可选值|说明
  * |---|---|
  * |phone|电话号码

@@ -1,6 +1,7 @@
 
 /**
- * @description 检查某个数据的数据类型
+ * @description 
+ * <span style='color:red;font-weight:bold'>检查某个数据的数据类型</span>
  * |输入值|输出
  * |---|---|
  * |123|Number

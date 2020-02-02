@@ -1,6 +1,6 @@
-import "./src/check"
-import "./src/typeOf"
-import './src/chunk'
+import check from "./src/check"
+import typeOf from "./src/typeOf.js"
+import chunk from './src/chunk.js'
 
 const helper = {
     check,

@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>formatTime.js - Documentation</title>
+    <title>debounce.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">formatTime.js</h1>
+    <h1 class="page-title">debounce.js</h1>
     
 
     
@@ -42,45 +42,29 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import typeOf from './typeOf'
+            <pre class="prettyprint source linenums"><code>import typeOf from "./typeOf"
+import now from "./now"
 
 /**
- * @description &lt;span style='color:red'>将时间戳格式化成指定格式&lt;/span>
- * @param {number} input - 时间戳 
- * @param {string} type -  格式（yyyy-mm-dd,h:m:s,yyyy-mm-dd h:m:s）
- * @return {string} - 格式化后的文本
- * @version 1.0.0
+ * @description &lt;span style='color:red'>防抖函数&lt;/span>
+ * @param {Function} func - 待执行函数
+ * @param {Number} wait - 防抖时间 ms为单位
+ * @param {Boolean} [first=true] - 可选参数 默认true true表示 取第一次触发 false 取最后一次触发
+ * @veriion 1.0.0
+ * @return {Function} - 返回可执行函数
  */
 
-const formatTime = function(input,type){
-    if(typeOf(input,'Number')===false){
-        throw new Error('expected number')
+const debounce = function (func,wait,first) {
+    if (!typeOf(func, 'Function')) {
+        throw new Error('func expected function')
     }
-    if(!type){
-        throw new Error('type is necessary')
+    if (!typeOf(wait, 'Number')) {
+        throw new Error('wait expected number')
     }
-    let time = new Date()
-    let result
-    switch (type) {
-        case 'yyyy-mm-dd':
-            result = time.getFullYear() + '-' + addZero(time.getMonth()) + "-" + addZero(time.getDate()) 
-            break
-        case 'h:m:s':
-            result = addZero(time.getHours())+":"+ addZero(time.getMinutes())+":"+addZero(time.getSeconds())
-            break
-        case 'yyyy-mm-dd h:m:s':
-            result =  time.getFullYear() + '-' + addZero(time.getMonth()) + "-" + addZero(time.getDate())+ " " + addZero(time.getHours())+":"+ addZero(time.getMinutes())+":"+addZero(time.getSeconds())
-            break   
-    }
-    return result
+    
 }
 
-function addZero(val){
-    val = val.toString()
-    return val.length>1?val:'0' + val
-}
-
-export default formatTime</code></pre>
+export default debounce</code></pre>
         </article>
     </section>
 

@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>formatTime.js - Documentation</title>
+    <title>copy.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">formatTime.js</h1>
+    <h1 class="page-title">copy.js</h1>
     
 
     
@@ -45,42 +45,26 @@
             <pre class="prettyprint source linenums"><code>import typeOf from './typeOf'
 
 /**
- * @description &lt;span style='color:red'>将时间戳格式化成指定格式&lt;/span>
- * @param {number} input - 时间戳 
- * @param {string} type -  格式（yyyy-mm-dd,h:m:s,yyyy-mm-dd h:m:s）
- * @return {string} - 格式化后的文本
- * @version 1.0.0
+ * @description &lt;span style='color:red'>简单拷贝数据&lt;/span>
+ * @param {Object|Array} input -输入的数据
+ * @return {Object|Array} - 返回拷贝过后的数据
  */
 
-const formatTime = function(input,type){
-    if(typeOf(input,'Number')===false){
-        throw new Error('expected number')
+const copy = function (input) {
+    let inputType = typeOf(input)
+    if(inputType!='Array'||inputType!='Object'){
+        throw new Error('expected Array or Object')
     }
-    if(!type){
-        throw new Error('type is necessary')
+    if(inputType == 'Array'){
+        return input.concat([])
     }
-    let time = new Date()
-    let result
-    switch (type) {
-        case 'yyyy-mm-dd':
-            result = time.getFullYear() + '-' + addZero(time.getMonth()) + "-" + addZero(time.getDate()) 
-            break
-        case 'h:m:s':
-            result = addZero(time.getHours())+":"+ addZero(time.getMinutes())+":"+addZero(time.getSeconds())
-            break
-        case 'yyyy-mm-dd h:m:s':
-            result =  time.getFullYear() + '-' + addZero(time.getMonth()) + "-" + addZero(time.getDate())+ " " + addZero(time.getHours())+":"+ addZero(time.getMinutes())+":"+addZero(time.getSeconds())
-            break   
+    if(inputType == 'Object'){
+        let s = JSON.stringify(input)
+        return JSON.parse(s)
     }
-    return result
 }
 
-function addZero(val){
-    val = val.toString()
-    return val.length>1?val:'0' + val
-}
-
-export default formatTime</code></pre>
+export default copy</code></pre>
         </article>
     </section>
 

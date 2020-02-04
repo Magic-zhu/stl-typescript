@@ -5,6 +5,7 @@ import debounce from "./src/debounce"
 import formatTime from "./src/formatTime"
 import getQuery from "./src/getQuery"
 import now from './src/now'
+import Observer from "./src/Observer"
 import throttle from "./src/throttle"
 import typeOf from "./src/typeOf"
 
@@ -16,6 +17,7 @@ const helper = {
     formatTime,
     getQuery,
     now,
+    Observer,
     throttle,
     typeOf,
 }

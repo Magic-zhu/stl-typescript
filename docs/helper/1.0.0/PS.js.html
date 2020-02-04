@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>formatTime.js - Documentation</title>
+    <title>PS.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">formatTime.js</h1>
+    <h1 class="page-title">PS.js</h1>
     
 
     
@@ -42,45 +42,29 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import typeOf from './typeOf'
+            <pre class="prettyprint source linenums"><code>import typefOf from "./typeOf"
 
 /**
- * @description &lt;span style='color:red'>将时间戳格式化成指定格式&lt;/span>
- * @param {number} input - 时间戳 
- * @param {string} type -  格式（yyyy-mm-dd,h:m:s,yyyy-mm-dd h:m:s）
- * @return {string} - 格式化后的文本
- * @version 1.0.0
+ * @class &lt;span style='color:red'>发布订阅库&lt;/span>
  */
 
-const formatTime = function(input,type){
-    if(typeOf(input,'Number')===false){
-        throw new Error('expected number')
+class PS {
+    constructor(){
+        _this.queue = []
     }
-    if(!type){
-        throw new Error('type is necessary')
+    //发布
+    pub(func){
+        if(!typefOf(func,'Function')){
+            throw new Error('expected function')
+        }
+        let ifHad = _this.queue.includes(func)
+        !ifHad?_this.queue.push(func):null
     }
-    let time = new Date()
-    let result
-    switch (type) {
-        case 'yyyy-mm-dd':
-            result = time.getFullYear() + '-' + addZero(time.getMonth()) + "-" + addZero(time.getDate()) 
-            break
-        case 'h:m:s':
-            result = addZero(time.getHours())+":"+ addZero(time.getMinutes())+":"+addZero(time.getSeconds())
-            break
-        case 'yyyy-mm-dd h:m:s':
-            result =  time.getFullYear() + '-' + addZero(time.getMonth()) + "-" + addZero(time.getDate())+ " " + addZero(time.getHours())+":"+ addZero(time.getMinutes())+":"+addZero(time.getSeconds())
-            break   
-    }
-    return result
 }
 
-function addZero(val){
-    val = val.toString()
-    return val.length>1?val:'0' + val
-}
+const ps = new PS()
 
-export default formatTime</code></pre>
+export default ps</code></pre>
         </article>
     </section>
 

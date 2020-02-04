@@ -17,6 +17,7 @@ const debounce = function (func,wait,first) {
     if (!typeOf(wait, 'Number')) {
         throw new Error('wait expected number')
     }
+    
 }
 
 export default debounce

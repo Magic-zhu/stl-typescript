@@ -4,7 +4,7 @@
   "description": "a javascript tools package",
   "main": "main.js",
   "scripts": {
-    "test": "",
+    "test": "jest ./test",
     "docs": "jsdoc --configure jsdoc.config.json",
     "build": "rollup -c"
   },

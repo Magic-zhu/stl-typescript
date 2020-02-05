@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>now.js - Documentation</title>
+    <title>Observer.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">now.js</h1>
+    <h1 class="page-title">Observer.js</h1>
     
 
     
@@ -42,17 +42,62 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @description 
- * &lt;span style='color:red'>获取到目前为止的毫秒数&lt;/span>
- * @return {Number} - 返回到目前为止的毫秒数
- * @version 1.0.0
+            <pre class="prettyprint source linenums"><code>import typefOf from "./typeOf"
+import copy from "./copy"
+/**
+ * @class &lt;span style='color:red'>简单观察者&lt;/span>
  */
-const now = function now (){
-    let date = new Date()
-    return date.getTime()
+
+class Observer {
+    /**
+     * @param {Array} queue - 内部的事件队列
+     */
+    constructor(){
+        this.queue = []
+    }
+    /**
+     * @description - 增加通知对象
+     * @param {Function} func - 需要执行的函数
+     */
+
+    add(func){
+        if(!typefOf(func,'Function')){
+            throw new Error('expected function')
+        }
+        let ifHad = this.queue.includes(func)
+        !ifHad?this.queue.push(func):null
+    }
+
+    /**
+     * @description - 移除通知对象
+     * @param {*} func 
+     */
+    remove(func){
+        if(!typefOf(func,'Function')){
+            throw new Error('expected function')
+        }
+        let index = this.queue.indexOf(func)
+        this.queue[index] = null;
+    }
+
+    /**
+     * 通知
+     * @param  {...any} args - 传入的参数 
+     */
+    notify(...args){
+        let array_temp = copy(this.queue)
+        this.queue.forEach((item,index)=>{
+            if(item===null){
+                array_temp.splice(index,1)
+            }else{
+                item.call(this,...args)
+            }
+        })
+        this.queue = array_temp
+    }
 }
-export default now </code></pre>
+
+export default Observer</code></pre>
         </article>
     </section>
 

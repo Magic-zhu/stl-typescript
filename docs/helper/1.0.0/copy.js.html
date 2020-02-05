@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>now.js - Documentation</title>
+    <title>copy.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">now.js</h1>
+    <h1 class="page-title">copy.js</h1>
     
 
     
@@ -42,17 +42,29 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @description 
- * &lt;span style='color:red'>获取到目前为止的毫秒数&lt;/span>
- * @return {Number} - 返回到目前为止的毫秒数
- * @version 1.0.0
+            <pre class="prettyprint source linenums"><code>import typeOf from './typeOf'
+
+/**
+ * @description &lt;span style='color:red'>简单拷贝数据&lt;/span>
+ * @param {Object|Array} input -输入的数据
+ * @return {Object|Array} - 返回拷贝过后的数据
  */
-const now = function now (){
-    let date = new Date()
-    return date.getTime()
+
+const copy = function (input) {
+    let inputType = typeOf(input)
+    if(inputType!='Array'||inputType!='Object'){
+        throw new Error('expected Array or Object')
+    }
+    if(inputType == 'Array'){
+        return input.concat([])
+    }
+    if(inputType == 'Object'){
+        let s = JSON.stringify(input)
+        return JSON.parse(s)
+    }
 }
-export default now </code></pre>
+
+export default copy</code></pre>
         </article>
     </section>
 

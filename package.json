@@ -1,5 +1,5 @@
 {
-  "name": "helper",
+  "name": "@magic-zhu/helper",
   "version": "1.0.0",
   "description": "a javascript tools package",
   "main": "main.js",
@@ -15,7 +15,6 @@
   "keywords": [
     "tool",
     "javascipt",
-    "lodash",
     "utils"
   ],
   "author": "magic-zhu",
@@ -31,9 +30,13 @@
     "jest": "^25.1.0",
     "minami": "^1.2.3",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.4"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.3"
-  }
+  },
+  "files":[
+    "main.js"
+  ]
 }

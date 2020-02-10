@@ -1,6 +1,6 @@
 ### 介绍
 
-![image](https://img.shields.io/badge/Version-1.0.0-green.svg)
+![image](https://img.shields.io/badge/Version-1.0.2-green.svg)
 
 一个自己的工具库，封装了项目中使用频率比较高的一些方法
 
@@ -10,6 +10,11 @@
 npm install @magic-zhu/helper  
 ```
 
+```js
+const helper = require ('@magic-zhu/helper')
+let {typeOf} = helper;
+console.log(typeOf('133')) //String
+```
 [api手册](https://magiczhuzhu.club/docs/helper/1.0.0/index.html)
 
 ### 开发

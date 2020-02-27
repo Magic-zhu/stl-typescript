@@ -15,7 +15,7 @@ const helper = require ('@magic-zhu/helper')
 let {typeOf} = helper;
 console.log(typeOf('133')) //String
 ```
-[api手册](https://magiczhuzhu.club/docs/helper/1.0.0/index.html)
+[api手册](https://magiczhuzhu.club/docs/helper/1.0.3/index.html)
 
 ### 开发
 

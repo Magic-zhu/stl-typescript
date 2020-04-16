@@ -11,13 +11,8 @@ const copy = function (input) {
     if(inputType!='Array'||inputType!='Object'){
         throw new Error('expected Array or Object')
     }
-    if(inputType == 'Array'){
-        return input.concat([])
-    }
-    if(inputType == 'Object'){
-        let s = JSON.stringify(input)
-        return JSON.parse(s)
-    }
+    let s = JSON.stringify(input)
+    return JSON.parse(s)
 }
 
 export default copy

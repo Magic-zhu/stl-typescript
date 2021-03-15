@@ -39,5 +39,6 @@
   "files": [
     "main.js",
     "src"
-  ]
+  ],
+  "typings":"index.d.ts"
 }

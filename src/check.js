@@ -13,7 +13,7 @@
  * @return {Bollean} - 返回布尔值
  * @version 1.0.0
  */
-const check = function (value, type) {
+ const check = function (value, type) {
     let reg;
     switch (type) {
         case 'phone':

@@ -8,7 +8,7 @@
 const chunk = function (array, size = 1) {
     let newArr = [];
     let length = array.length;
-    let arrSize = ~~(length / size);
+    let arrSize = Math.floor(length / size);
     for (let i = 0; i < arrSize; i++) {
         let temp = [];
         for (let j = 0; j < size; j++) {

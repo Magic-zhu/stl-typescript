@@ -1,19 +1,30 @@
 
-import resolve from 'rollup-plugin-node-resolve';
-import babel from 'rollup-plugin-babel';
-import { uglify } from 'rollup-plugin-uglify';
+import typescript from 'rollup-plugin-typescript2';
+import {terser} from 'rollup-plugin-terser';
 
-export default {
-    input: 'index.js',
-    output: {
-        file: 'main.js',
-        format: 'es'
-    },
+export default [
+  {
+    input: 'index.ts',
     plugins: [
-        resolve(),
-        babel({
-            exclude: 'node_modules/**'
-        }),
-        // uglify(),
-    ]
-}
+      typescript(),
+      terser(),
+    ],
+    output: [
+      {
+        file: 'dist/helper.es.js',
+        format: 'es',
+        name: 'helper',
+      },
+      {
+        file: 'dist/helper.iife.js',
+        format: 'iife',
+        name: 'helper',
+      },
+      {
+        file: 'dist/helper.umd.js',
+        format: 'umd',
+        name: 'helper',
+      },
+    ],
+  },
+];

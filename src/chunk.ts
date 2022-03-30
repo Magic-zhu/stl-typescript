@@ -5,8 +5,8 @@
  *  @return {Array} - 返回一个包含拆分区块的新数组（相当于一个二维数组）。
  *  @version 1.0.0
 */
-const chunk = function (array, size = 1) {
-    let newArr = [];
+export const chunk = function (array:any [], size:number = 1):any []{
+    let newArr = []
     let length = array.length;
     let arrSize = Math.floor(length / size);
     for (let i = 0; i < arrSize; i++) {
@@ -19,4 +19,3 @@ const chunk = function (array, size = 1) {
     if (length % size !== 0) newArr.push(array.slice(arrSize * size, length));
     return newArr
 }
-export default chunk

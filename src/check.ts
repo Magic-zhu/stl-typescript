@@ -13,8 +13,8 @@
  * @return {Bollean} - 返回布尔值
  * @version 1.0.0
  */
- const check = function (value, type) {
-    let reg;
+export const check = function (value:any, type:string):boolean {
+    let reg:RegExp;
     switch (type) {
         case 'phone':
             reg = /^[1][3456789][0-9]{9}$/;
@@ -36,4 +36,3 @@
     }
     return reg.test(value)
 }
-export default check

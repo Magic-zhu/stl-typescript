@@ -1,5 +1,5 @@
-import typeOf from "./typeOf"
-import now from "./now"
+import { typeOf } from "./typeOf"
+import { now } from "./now"
 
 /**
  * @description <span style='color:red'>节流函数(wait时间内只能执行一次该函数)</span>
@@ -10,7 +10,7 @@ import now from "./now"
  * @return {Function} - 返回可执行函数
  */
 
-const throttle = function (func, wait) {
+export const throttle = function (func: Function, wait: number): Function {
     if (!typeOf(func, 'Function')) {
         throw new Error('func expected function')
     }
@@ -27,4 +27,3 @@ const throttle = function (func, wait) {
         }
     }
 }
-export default throttle

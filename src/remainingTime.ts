@@ -1,9 +1,13 @@
 /**
  * 计算剩余时间
  * @param {number} inputMicroSeconds - 输入截止时间 毫秒
- * @return {object} {day,time} day-剩余天数 time-时间字符串 xx:xx:xx
+ * @return {Remain} {day,time} day-剩余天数 time-时间字符串 xx:xx:xx
  */
-function remainingTime(inputMicroSeconds){
+interface Remain {
+  day:number,
+  time:string,
+}
+export function remainingTime(inputMicroSeconds:number):Remain{
     let date = inputMicroSeconds;
     let nowDate = new Date().getTime();
     let diff = date - nowDate;
@@ -30,5 +34,3 @@ function remainingTime(inputMicroSeconds){
       time,
     };
 }
-
-export default remainingTime

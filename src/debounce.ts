@@ -1,5 +1,5 @@
-import typeOf from "./typeOf"
-import now from "./now"
+import { typeOf } from "./typeOf"
+import { now } from "./now"
 
 /**
  * @description <span style='color:red'>防抖函数(wait时间内只能执行一次，若触发了 则重新计算时间)</span>
@@ -9,7 +9,7 @@ import now from "./now"
  * @veriion 1.0.0
  * @return {Function} - 返回可执行函数
  */
-const debounce = function (func,wait,first=true) {
+export const debounce = function (func: Function, wait: number, first: boolean = true):Function {
     if (!typeOf(func, 'Function')) {
         throw new Error('func expected function')
     }
@@ -17,24 +17,23 @@ const debounce = function (func,wait,first=true) {
         throw new Error('wait expected number')
     }
     let timeNow = 0,
-    next = 0,
-    timer =null
+        next = 0,
+        timer = null
     return function () {
-        if(first){
-            timeNow = now()  
-            timeNow > next?func.apply(this,arguments):null
-            next = now() + wait  
-        }else{
-            if(timer){
+        if (first) {
+            timeNow = now()
+            timeNow > next ? func.apply(this, arguments) : null
+            next = now() + wait
+        } else {
+            if (timer) {
                 clearTimeout(timer)
                 timer = null
             }
-            timer = setTimeout(()=>{
-                func.apply(this,arguments)
+            timer = setTimeout(() => {
+                func.apply(this, arguments)
                 timer = null
-            },wait)
+            }, wait)
         }
     }
 }
-export default debounce
 

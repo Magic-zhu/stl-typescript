@@ -6,8 +6,8 @@
  * @version 1.0.0 
  */
 
-const getQuery = function (url){
-    let uri = url.split('?')[1];
+export const getQuery = function (url:string):any{
+    let uri:string | string []= url.split('?')[1];
     uri = uri.split('&');
     let obj = {};
     uri.forEach(item=>{
@@ -17,4 +17,3 @@ const getQuery = function (url){
     return obj
 }
 
-export default getQuery

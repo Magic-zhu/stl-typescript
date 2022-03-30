@@ -2,7 +2,7 @@
     "source": {
         "include": [
             "package.json",
-            "./src"
+            "./dist"
         ],
         "includePattern": ".js$",
         "excludePattern": "(node_modules/|docs)"

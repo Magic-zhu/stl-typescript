@@ -1,4 +1,4 @@
-import typeOf from './typeOf'
+import { typeOf } from "./typeOf";
 
 /**
  * @description <span style='color:red'>简单拷贝数据</span>
@@ -7,11 +7,11 @@ import typeOf from './typeOf'
  * @version 1.0.1
  */
 
-export const copy = function (input:any):any {
-    let inputType = typeOf(input)
-    if(inputType!='Array' && inputType!='Object'){
-        throw new Error('expected Array or Object')
-    }
-    let s = JSON.stringify(input)
-    return JSON.parse(s)
-}
+export const copy = function (input: any): any {
+  let inputType = typeOf(input);
+  if (inputType != "Array" && inputType != "Object") {
+    throw new Error("expected Array or Object");
+  }
+  let s = JSON.stringify(input);
+  return JSON.parse(s);
+};

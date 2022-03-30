@@ -1,6 +1,5 @@
-
 /**
- * @description 
+ * @description
  * <span style='color:red;font-weight:bold'>检查某个数据的数据类型</span>
  * |输入值|输出
  * |---|---|
@@ -20,19 +19,25 @@
  * @return {Boolean|String} - 返回首字母大写的数据类型（ex：Number）或者布尔值
  * @version 1.0.0
  */
-export const typeOf = function(value:any,type:string){
-    let r = typeof value
-    if (r !== 'object') {
-        if(type){
-            return r.charAt(0).toUpperCase() + r.slice(1,r.length) == type
-        }else{
-            return r.charAt(0).toUpperCase() + r.slice(1,r.length)
-        }
-    }else{
-        if(type){
-            return Object.prototype.toString.call(value).replace(/^\[object (\S+)\]$/, '$1') == type
-        }else{
-            return Object.prototype.toString.call(value).replace(/^\[object (\S+)\]$/, '$1')
-        }
+export const typeOf = function (value: any, type?: string) {
+  let r = typeof value;
+  if (r !== "object") {
+    if (type) {
+      return r.charAt(0).toUpperCase() + r.slice(1, r.length) == type;
+    } else {
+      return r.charAt(0).toUpperCase() + r.slice(1, r.length);
     }
-}
+  } else {
+    if (type) {
+      return (
+        Object.prototype.toString
+          .call(value)
+          .replace(/^\[object (\S+)\]$/, "$1") == type
+      );
+    } else {
+      return Object.prototype.toString
+        .call(value)
+        .replace(/^\[object (\S+)\]$/, "$1");
+    }
+  }
+};

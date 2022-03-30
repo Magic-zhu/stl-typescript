@@ -1,8 +1,10 @@
 {
   "name": "@magic-zhu/helper",
-  "version": "1.0.6",
-  "description": "a javascript tools package",
-  "main": "/src",
+  "version": "1.0.7",
+  "description": "A modern JavaScript utility library",
+  "main": "./dist/helper.umd.js",
+  "module": "./dist/helper.es.js",
+  "types": "./dist/index.d.ts'",
   "scripts": {
     "test": "jest ./test",
     "docs": "jsdoc --configure jsdoc.config.json",
@@ -15,6 +17,7 @@
   "keywords": [
     "tool",
     "javascipt",
+    "typescript",
     "utils"
   ],
   "author": "magic-zhu",

@@ -1,6 +1,6 @@
 ### 介绍
 
-![image](https://img.shields.io/badge/Version-1.0.5-green.svg)
+![image](https://img.shields.io/badge/Version-1.0.7-green.svg)
 
 一个自己的工具库，封装了项目中使用频率比较高的一些方法
 

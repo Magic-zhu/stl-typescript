@@ -1,8 +1,9 @@
 /**
  * 乱序数组
- * @param {*} input 
+ * @param {*} input
+ * @return {*} 
  */
-function shuffle(input) {
+function shuffle(input: any []) {
     for (var i = input.length - 1; i >= 0; i--) {
         var randomIndex = Math.floor(Math.random() * (i + 1));
         var itemAtIndex = input[randomIndex];

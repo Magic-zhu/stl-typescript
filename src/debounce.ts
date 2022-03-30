@@ -19,10 +19,10 @@ export const debounce = function (func: Function, wait: number, first: boolean =
     let timeNow = 0,
         next = 0,
         timer = null
-    return function () {
+    return function (...args: any[]) {
         if (first) {
             timeNow = now()
-            timeNow > next ? func.apply(this, arguments) : null
+            timeNow > next ? func.apply(this, ...args) : null
             next = now() + wait
         } else {
             if (timer) {
@@ -30,7 +30,7 @@ export const debounce = function (func: Function, wait: number, first: boolean =
                 timer = null
             }
             timer = setTimeout(() => {
-                func.apply(this, arguments)
+                func.apply(this, ...args)
                 timer = null
             }, wait)
         }

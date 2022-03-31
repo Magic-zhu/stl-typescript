@@ -7,7 +7,7 @@
   "types": "./dist/index.d.ts'",
   "scripts": {
     "test": "jest ./test",
-    "docs": "jsdoc --configure jsdoc.config.json",
+    "docs": "typedoc",
     "build": "rollup -c"
   },
   "repository": {
@@ -34,6 +34,7 @@
     "minami": "^1.2.3",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
+    "typedoc": "^0.22.13",
     "typescript": "^4.6.3"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "@magic-zhu/helper",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A modern JavaScript utility library",
   "main": "./dist/helper.umd.js",
   "module": "./dist/helper.es.js",
@@ -8,7 +8,9 @@
   "scripts": {
     "test": "jest ./test",
     "docs": "typedoc",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "release": "npm run build && npm run docs && npm publish"
   },
   "repository": {
     "type": "git",

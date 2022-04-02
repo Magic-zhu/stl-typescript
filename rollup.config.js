@@ -13,17 +13,17 @@ export default [
       {
         file: 'dist/helper.es.js',
         format: 'es',
-        name: 'helper',
+        name: 'Helper',
       },
       {
         file: 'dist/helper.iife.js',
         format: 'iife',
-        name: 'helper',
+        name: 'Helper',
       },
       {
         file: 'dist/helper.umd.js',
         format: 'umd',
-        name: 'helper',
+        name: 'Helper',
       },
     ],
   },

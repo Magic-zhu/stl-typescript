@@ -1,4 +1,4 @@
-import typeOf from "../src/typeOf"
+import {typeOf} from "../dist/helper.es";
 
 test('typeOf 123 should be Number', () => {
     expect(typeOf(123)).toBe('Number')

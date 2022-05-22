@@ -1,6 +1,6 @@
 {
   "name": "@magic-zhu/helper",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A modern JavaScript utility library",
   "main": "./dist/helper.umd.js",
   "module": "./dist/helper.es.js",

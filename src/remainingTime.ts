@@ -1,12 +1,15 @@
-/**
- * 计算剩余时间
- * @param {number} inputMicroSeconds - 输入截止时间 毫秒
- * @return {Remain} {day,time} day-剩余天数 time-时间字符串 xx:xx:xx
- */
-interface Remain {
+export interface Remain {
   day:number,
   time:string,
 }
+
+/**
+ * 计算剩余时间
+ *
+ * @export
+ * @param {number} inputMicroSeconds
+ * @return {*}  {Remain} day-剩余天数 time-时间字符串 xx:xx:xx
+ */
 export function remainingTime(inputMicroSeconds:number):Remain{
     let date = inputMicroSeconds;
     let nowDate = new Date().getTime();

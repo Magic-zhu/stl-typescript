@@ -1,6 +1,6 @@
 {
   "name": "stl-typescript",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A modern JavaScript/Typescript utility library",
   "main": "./dist/helper.umd.js",
   "module": "./index.ts",
@@ -43,7 +43,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.8.3"
   },
-  "files":[
+  "files": [
     "dist",
     "src"
   ],

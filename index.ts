@@ -16,5 +16,6 @@ export * from "./src/typeOf"
 export * from "./src/getFpsTime"
 export * from "./src/os"
 export * from "./src/blobToString"
-export * from "./src/scaleFrom"
 export * from "./src/IO"
+// ? geometry
+export * from "./src/geometry/intersection_rectangle"

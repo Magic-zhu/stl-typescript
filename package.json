@@ -1,6 +1,6 @@
 {
   "name": "stl-typescript",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A modern JavaScript/Typescript utility library",
   "main": "./dist/helper.umd.js",
   "module": "./index.ts",
@@ -47,7 +47,7 @@
   "files": [
     "dist",
     "src",
-    "index.ts"
+    "./index.ts"
   ],
   "typings": "./dist/index.d.ts"
 }

@@ -45,7 +45,8 @@
   },
   "files":[
     "dist",
-    "src"
+    "src",
+    "index.ts"
   ],
   "typings": "./dist/index.d.ts"
 }

@@ -13,5 +13,6 @@ export const copy = function (input: any): any {
     throw new Error("expected Array or Object");
   }
   let s = JSON.stringify(input);
-  return JSON.parse(s);
+  const n = s;
+  return JSON.parse(n);
 };

@@ -23,8 +23,8 @@ export const intersection_rectangle = (
 ): boolean => {
   const centerX = x + width / 2;
   const centerY = y + height / 2;
-  const centerX2 = x2 + width / 2;
-  const centerY2 = y2 + height / 2;
+  const centerX2 = x2 + width2 / 2;
+  const centerY2 = y2 + height2 / 2;
   const x_axis_projection = Math.abs(centerX2 - centerX);
   const y_axis_projection = Math.abs(centerY2 - centerY);
   if (

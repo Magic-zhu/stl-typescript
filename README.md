@@ -21,4 +21,3 @@ npm install stl-typescript
 import {typeOf} from 'stl-typescript'
 console.log(typeOf('133')) //String
 ```
-

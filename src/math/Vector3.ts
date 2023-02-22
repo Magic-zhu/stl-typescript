@@ -76,4 +76,57 @@ export class Vector3 {
     this.z = a.z + b.z
     return this
   }
+
+  sub(v: Vector3): Vector3 {
+    this.x -= v.x
+    this.y -= v.y
+    this.z -= v.z
+    return this
+  }
+
+  subScalar(s: number): Vector3 {
+    this.x -= s
+    this.y -= s
+    this.z -= s
+    return this
+  }
+
+  subVectors(a: Vector3, b: Vector3): Vector3 {
+    this.x = a.x - b.x
+    this.y = a.y - b.y
+    this.z = a.z - b.z
+    return this
+  }
+
+  multiply(v: Vector3): Vector3 {
+    this.x *= v.x
+    this.y *= v.y
+    this.z *= v.z
+    return this
+  }
+
+  multiplyScalar(s: number): Vector3 {
+    this.x *= s
+    this.y *= s
+    this.z *= s
+    return this
+  }
+
+  multiplyVectors(a: Vector3, b: Vector3): Vector3 {
+    this.x = a.x * b.x
+    this.y = a.y * b.y
+    this.z = a.z * b.z
+    return this
+  }
+
+  divide(v: Vector3): Vector3 {
+    this.x /= v.x
+    this.y /= v.y
+    this.z /= v.z
+    return this
+  }
+
+  divideScalar(scalar: number): Vector3 {
+    return this.multiplyScalar(1 / scalar)
+  }
 }

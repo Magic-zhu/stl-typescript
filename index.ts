@@ -21,3 +21,4 @@ export * from "./src/IO"
 export * from "./src/geometry/intersection_rectangle"
 // ? math
 export * from "./src/math/Vector3"
+export * from "./src/math/Lerp"

@@ -2,14 +2,17 @@
 
 ![image](https://img.shields.io/badge/Version-0.0.1-green.svg)
 
-一个函数库
+Utility Functions
 
-### 文档📖
+### Docs 📖
 
-https://magic-zhu.github.io/helper/
+https://magic-zhu.github.io/stl-typescript/
 
-- intersection_rectangle 🫱 判断两个矩形是否相交
-- blobTostring 🫱 blob对象转成string
+- Geometry
+
+- Math
+
+- System
 
 ### How to use
 
@@ -18,6 +21,6 @@ npm install stl-typescript
 ```
 
 ```ts
-import {typeOf} from 'stl-typescript'
-console.log(typeOf('133')) //String
+import { typeOf } from "stl-typescript"
+console.log(typeOf("133")) //String
 ```

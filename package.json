@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "description": "A modern JavaScript/Typescript utility library",
   "main": "./dist/helper.umd.js",
-  "module": "./index.ts",
+  "module": "./dist/helper.es.js",
   "types": "./dist/index.d.ts'",
   "scripts": {
     "test": "jest ./test",
@@ -46,8 +46,6 @@
   },
   "files": [
     "dist",
-    "src",
-    "./index.ts"
-  ],
-  "typings": "./dist/index.d.ts"
+    "src"
+  ]
 }

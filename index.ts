@@ -6,7 +6,7 @@ export * from "./src/formatTime"
 export * from "./src/getQuery"
 export * from "./src/getStringByteLength"
 export * from "./src/IosOrAndroid"
-export * from './src/now'
+export * from "./src/now"
 export * from "./src/remainingTime"
 export * from "./src/shuffle"
 export * from "./src/sliceByByte"
@@ -19,3 +19,5 @@ export * from "./src/blobToString"
 export * from "./src/IO"
 // ? geometry
 export * from "./src/geometry/intersection_rectangle"
+// ? math
+export * from "./src/math/Vector3"

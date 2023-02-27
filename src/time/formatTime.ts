@@ -1,4 +1,4 @@
-import { typeOf } from './typeOf'
+import { typeOf } from '../typeOf'
 
 /**
  * @description <span style='color:red'>将时间戳格式化成指定格式</span>

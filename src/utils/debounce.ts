@@ -1,5 +1,5 @@
-import { typeOf } from "./typeOf"
-import { now } from "./now"
+import { typeOf } from "../typeOf"
+import { now } from "../time/now"
 
 /**
  * @description <span style='color:red'>防抖函数(wait时间内只能执行一次，若触发了 则重新计算时间)</span>

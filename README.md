@@ -1,6 +1,6 @@
 ### Introduction
 
-![image](https://img.shields.io/badge/Version-0.0.1-green.svg)
+![image](https://img.shields.io/badge/Version-0.0.5-green.svg)
 
 Utility Functions
 

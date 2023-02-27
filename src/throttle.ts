@@ -1,5 +1,5 @@
 import { typeOf } from "./typeOf"
-import { now } from "./now"
+import { now } from "./time/now"
 
 /**
  * @description <span style='color:red'>节流函数(wait时间内只能执行一次该函数)</span>

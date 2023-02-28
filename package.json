@@ -1,6 +1,6 @@
 {
   "name": "stl-typescript",
-  "version": "0.0.4",
+  "version": "0.0.5-0",
   "description": "A modern JavaScript/Typescript utility library",
   "main": "./dist/helper.umd.js",
   "module": "./dist/helper.es.js",

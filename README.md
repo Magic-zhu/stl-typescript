@@ -8,12 +8,6 @@ Utility Functions
 
 https://magic-zhu.github.io/stl-typescript/
 
-- Geometry
-
-- Math
-
-- System
-
 ### How to use
 
 ```bash

@@ -2,7 +2,12 @@
 
 ![image](https://img.shields.io/badge/Version-0.0.5-green.svg)
 
-Utility Functions
+A modern JavaScript/Typescript utility library
+
+- Math
+- Geometry
+- String
+- Time
 
 ### Docs 📖
 

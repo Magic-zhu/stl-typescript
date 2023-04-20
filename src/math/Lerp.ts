@@ -1,5 +1,5 @@
 import { Vector3 } from "./Vector3"
-import { typeOf } from "src/utils/typeOf"
+import { typeOf } from "../utils/typeOf"
 
 /**
  * @description 插值函数
@@ -18,7 +18,7 @@ export function lerp<T>(A: T, B: T, alpha: number): any {
   }
 }
 
-export function lerpNumber(A: any, B: any, alpha: number):number{
+export function lerpNumber(A: any, B: any, alpha: number): number {
   return A + (B - A) * alpha
 }
 
@@ -29,7 +29,7 @@ export function lerpNumber(A: any, B: any, alpha: number):number{
  * @param alpha
  * @return Vector3
  */
-export function lerpVector3(a: any, b: any, alpha: number):Vector3{
+export function lerpVector3(a: any, b: any, alpha: number): Vector3 {
   const x = a.clone()
   const y = b.clone()
   // A + v*(B-A)

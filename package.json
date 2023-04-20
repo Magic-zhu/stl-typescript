@@ -2,7 +2,7 @@
   "name": "stl-typescript",
   "version": "0.0.5",
   "description": "A modern JavaScript/Typescript utility library",
-  "main": "./dist/helper.umd.js",
+  "main": "./dist/helper.es.js",
   "module": "./dist/helper.es.js",
   "types": "./dist/index.d.ts'",
   "scripts": {

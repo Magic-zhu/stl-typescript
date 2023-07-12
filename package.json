@@ -2,8 +2,8 @@
   "name": "stl-typescript",
   "version": "0.0.6",
   "description": "A modern JavaScript/Typescript utility library",
-  "main": "./dist/helper.es.js",
-  "module": "./dist/helper.es.js",
+  "main": "./dist/stl.es.js",
+  "module": "./dist/stl.es.js",
   "types": "./dist/index.d.ts'",
   "scripts": {
     "test": "jest ./test",

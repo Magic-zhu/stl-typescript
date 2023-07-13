@@ -13,19 +13,19 @@ export default [
     ],
     output: [
       {
-        file: 'dist/helper.es.js',
+        file: 'dist/stl.es.js',
         format: 'es',
-        name: 'Helper',
+        name: 'STL',
       },
       {
-        file: 'dist/helper.iife.js',
+        file: 'dist/stl.iife.js',
         format: 'iife',
-        name: 'Helper',
+        name: 'STL',
       },
       {
-        file: 'dist/helper.umd.js',
+        file: 'dist/stl.umd.js',
         format: 'umd',
-        name: 'Helper',
+        name: 'STL',
       },
     ],
   },

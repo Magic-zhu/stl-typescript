@@ -1,6 +1,6 @@
 /**
- *
- * @return {*}  {Promise<number>}
+ * 获取当前帧数
+ * @return {Promise} Number
  */
 export const getFpsTime = (): Promise<number> => {
   return new Promise((resolve,reject) => {

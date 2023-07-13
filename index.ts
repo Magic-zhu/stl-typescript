@@ -27,12 +27,14 @@ import {intersection_rectangle} from "./src/geometry/intersection_rectangle"
 import {Box3} from "./src/geometry/Box3"
 import {Sphere} from "./src/geometry/Sphere"
 import {Triangle} from "./src/geometry/Triangle"
+import { Plane } from "./src/geometry/Plane"
 
 // ? math
 import {Vector3} from "./src/math/Vector3"
 import {lerp, lerpNumber, lerpVector3, lerpVector3Ease} from "./src/math/Lerp"
 import {Vector2} from "./src/math/Vector2"
 import {Vector4} from "./src/math/Vector4"
+import { Matrix3 } from "./src/math/Matrix3"
 
 export {
     chunk,
@@ -62,4 +64,6 @@ export {
     Triangle,
     Vector2,
     Vector4,
+    Plane,
+    Matrix3,
 }

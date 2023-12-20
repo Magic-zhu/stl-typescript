@@ -4,7 +4,7 @@
   "description": "A modern JavaScript/Typescript utility library",
   "main": "./dist/stl.es.js",
   "module": "./dist/stl.es.js",
-  "types": "./dist/index.d.ts'",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "jest ./test",
     "docs": "typedoc",

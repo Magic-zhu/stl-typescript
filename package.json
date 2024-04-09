@@ -1,8 +1,8 @@
 {
   "name": "stl-typescript",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A modern JavaScript/Typescript utility library",
-  "main": "./dist/stl.es.js",
+  "main": "./dist/stl.umd.js",
   "module": "./dist/stl.es.js",
   "types": "./dist/index.d.ts'",
   "scripts": {
@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/Magic-zhu/helper#readme",
   "devDependencies": {
+    "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "babel-preset-latest": "^6.24.1",
     "docdash": "^1.2.0",
@@ -42,11 +43,10 @@
     "typescript": "^4.6.3"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.8.3",
-    "gl-matrix": "^3.4.3"
+    "gl-matrix": "^3.4.3",
+    "gpu.js": "^2.16.0"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ]
 }

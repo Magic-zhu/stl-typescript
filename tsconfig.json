@@ -14,7 +14,8 @@
     "declaration": true, // 是否自动创建类型声明文件
     "outDir": "./dist/",
     "allowJs": true, // 允许编译javascript文件。
-    "lib": [ // 编译过程中需要引入的库文件的列表
+    "lib": [
+      // 编译过程中需要引入的库文件的列表
       "es5",
       "es2015",
       "es2016",
@@ -23,14 +24,9 @@
       "dom"
     ]
   },
-    // 指定一个匹配列表（属于自动指定该路径下的所有ts相关文件）
-    "include": [
-      "./index.ts"
-    ],
-    
+  // 指定一个匹配列表（属于自动指定该路径下的所有ts相关文件）
+  "include": ["src/index.ts"],
+
   // 指定一个排除列表（include的反向操作）
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "exclude": ["node_modules", "dist"]
 }

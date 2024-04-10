@@ -1,18 +1,25 @@
 ### Introduction
 
-![image](https://img.shields.io/badge/Version-0.0.9-green.svg)
+![image](https://img.shields.io/badge/Version-0.0.11-green.svg)
 
 A modern JavaScript/Typescript utility library
 
 - Math
+  - Vector2
+  - Vector3
+  - Vector4
 - Geometry
+  - intersection_rectangle
 - String
+  - blobToString
+  - stringToBuffer
 - Time
-- Container
-- SearchContainer: Fast to return Search Result
+- Array
+  - ArrayPro
 - Utils
   - debounce
   - throttle
+  - typeOf
 
 ### Docs 📖
 

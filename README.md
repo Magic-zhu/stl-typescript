@@ -1,6 +1,6 @@
 ### Introduction
 
-![image](https://img.shields.io/badge/Version-0.0.7-green.svg)
+![image](https://img.shields.io/badge/Version-0.0.9-green.svg)
 
 A modern JavaScript/Typescript utility library
 
@@ -9,7 +9,10 @@ A modern JavaScript/Typescript utility library
 - String
 - Time
 - Container
- - SearchContainer: Fast to return Search Result
+- SearchContainer: Fast to return Search Result
+- Utils
+  - debounce
+  - throttle
 
 ### Docs 📖
 
@@ -22,6 +25,6 @@ npm install stl-typescript
 ```
 
 ```ts
-import { typeOf } from "stl-typescript"
-console.log(typeOf("133")) //String
+import { typeOf } from "stl-typescript";
+console.log(typeOf("133")); //String
 ```

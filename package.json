@@ -1,10 +1,10 @@
 {
   "name": "stl-typescript",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "description": "A modern JavaScript/Typescript utility library",
-  "main": "./dist/stl.umd.js",
-  "module": "./dist/stl.es.js",
-  "types": "./dist/index.d.ts'",
+  "main": "dist/stl.umd.js",
+  "module": "dist/stl.es.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest ./test",
     "docs": "typedoc",

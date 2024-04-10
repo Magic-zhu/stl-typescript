@@ -9,6 +9,11 @@ import { solveIosKeybordBug } from "./solveIosKeybordBug";
 import { blobToString } from "./string/blobToString";
 import IO from "./IO";
 
+// ? array
+
+import { ArrayPro } from "./array/ArrayPro";
+// import { SearchContainer } from "./array/SearchContainer";
+
 // ? time
 import { getFpsTime } from "./time/getFpsTime";
 import { now } from "./time/now";
@@ -69,4 +74,5 @@ export {
   Vector4,
   Plane,
   Matrix3,
+  ArrayPro,
 };

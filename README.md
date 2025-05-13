@@ -16,6 +16,7 @@ A modern JavaScript/Typescript utility library
 - Time
 - Array
   - ArrayPro
+  - IForEach -> forEach with break
 - Utils
   - debounce
   - throttle

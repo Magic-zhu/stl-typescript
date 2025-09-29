@@ -1,6 +1,6 @@
 ### Introduction
 
-![image](https://img.shields.io/badge/Version-0.0.11-green.svg)
+![image](https://img.shields.io/badge/Version-0.0.16-green.svg)
 
 A modern JavaScript/Typescript utility library
 
@@ -23,6 +23,7 @@ A modern JavaScript/Typescript utility library
   - ArrayPro
   - IForEach -> forEach with break
   - SearchContainier 对于搜索频率很高的数组数据建立索引，提升搜索性能
+  - shuffle 洗牌算法 乱序数组
 - Utils
   - debounce
   - throttle

@@ -2,7 +2,6 @@ import { check } from "./check";
 import { getQuery } from "./getQuery";
 import { getStringByteLength } from "./getStringByteLength";
 import { IosOrAndroid } from "./IosOrAndroid";
-import { shuffle } from "./shuffle";
 import { sliceByByte } from "./sliceByByte";
 import { solveIosKeybordBug } from "./solveIosKeybordBug";
 import { blobToString } from "./string/blobToString";
@@ -13,7 +12,8 @@ import IO from "./IO";
 import { ArrayPro } from "./array/ArrayPro";
 import { IForEach } from "./array/IForEach";
 import { chunk } from "./array/chunk";
-// import { SearchContainer } from "./array/SearchContainer";
+import { SearchContainer } from "./array/SearchContainer";
+import { shuffle } from "./array/shuffle";
 
 // ? time
 import { getFpsTime } from "./time/getFpsTime";
@@ -46,15 +46,17 @@ import { uuid } from "./math/uuid";
 import { euclideanModulo } from "./math/mod";
 
 export {
+  // ? array
   chunk,
+  SearchContainer,
+  ArrayPro,
+  IForEach,
   check,
   getQuery,
   getStringByteLength,
   IosOrAndroid,
-  ArrayPro,
   Box3,
   IO,
-  IForEach,
   Matrix3,
   Plane,
   Sphere,

@@ -11,6 +11,10 @@ export class ArrayPro<T> {
     return this._array;
   }
 
+  set value(arr: T[]) {
+    this._array = arr;
+  }
+
   /**
    * @description 'foreach' likely function that can be interrupted (use return false)
    * @param func

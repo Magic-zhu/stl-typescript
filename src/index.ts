@@ -29,6 +29,7 @@ import { copy } from "./utils/copy";
 import { debounce } from "./utils/debounce";
 import { hexToRgb } from "./utils/color";
 import { Lazy } from "./utils/Lazy";
+import { MiniLazy } from "./utils/MiniLazy";
 
 // ? geometry
 import { intersection_rectangle } from "./geometry/intersection_rectangle";
@@ -88,4 +89,5 @@ export {
   uuid,
   // ? utils
   Lazy,
+  MiniLazy,
 };

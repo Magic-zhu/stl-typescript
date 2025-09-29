@@ -28,6 +28,7 @@ import { os } from "./utils/os";
 import { copy } from "./utils/copy";
 import { debounce } from "./utils/debounce";
 import { hexToRgb } from "./utils/color";
+import { Lazy } from "./utils/Lazy";
 
 // ? geometry
 import { intersection_rectangle } from "./geometry/intersection_rectangle";
@@ -85,4 +86,6 @@ export {
   throttle,
   typeOf,
   uuid,
+  // ? utils
+  Lazy,
 };

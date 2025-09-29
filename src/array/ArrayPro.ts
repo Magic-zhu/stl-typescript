@@ -54,4 +54,16 @@ export class ArrayPro<T> {
   empty() {
     this._array = [];
   }
+
+  getVal(index: number) {
+    if (index < 0 || index > this._array.length) return null;
+    return this._array[index];
+  }
+
+  setValue(index, value: T) {
+    if (index < 0 || index > this._array.length) {
+      throw new Error("Index out of range");
+    }
+    this._array[index] = value;
+  }
 }

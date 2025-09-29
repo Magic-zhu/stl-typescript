@@ -1,4 +1,3 @@
-import { chunk } from "./chunk";
 import { check } from "./check";
 import { getQuery } from "./getQuery";
 import { getStringByteLength } from "./getStringByteLength";
@@ -13,6 +12,7 @@ import IO from "./IO";
 
 import { ArrayPro } from "./array/ArrayPro";
 import { IForEach } from "./array/IForEach";
+import { chunk } from "./array/chunk";
 // import { SearchContainer } from "./array/SearchContainer";
 
 // ? time

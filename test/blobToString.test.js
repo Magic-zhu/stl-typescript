@@ -1,4 +1,4 @@
-import { blobToString } from "../dist/helper.es";
+import { blobToString } from "../dist/stl.es";
 const t = new Blob(["测试字符"]);
 test("blobTostring test", () => {
   return blobToString(t).then((r) => {
